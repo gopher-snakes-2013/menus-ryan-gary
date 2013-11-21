@@ -1,0 +1,13 @@
+<h3>Welcome to Awesome Menus!</h3>
+
+<%= form_for @menu, remote: true do |f| %>
+  <%= f.text_field :title %>
+  <%= f.submit "Add Menu" %>
+<% end %>
+
+<p id="error_message"></p>
+<ul id="menu_list">
+<% @menus.each do |m| %>
+    <%= render partial: "menu", locals: {:mary => m} %>
+<% end %>
+</ul>

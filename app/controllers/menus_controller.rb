@@ -7,7 +7,7 @@ class MenusController < ApplicationController
   def create
     @menu = Menu.new(params[:menu])
     if @menu.save
-      render :json => { :menu_item => render_to_string( :partial => "menu", locals: {:mary => @menu}) }
+      render :json => { :menu_item => render_to_string( :partial => "menu", locals: {:m => @menu}) }
     else
       render :json => { :error => @menu.errors.full_messages.join(", ")}, :status => :unprocessable_entity
     end

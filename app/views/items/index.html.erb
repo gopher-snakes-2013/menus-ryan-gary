@@ -1,0 +1,15 @@
+<%= form_for @item, url: menu_items_path() do |f| %>
+  <div>
+    <%= f.text_field :name, placeholder: "item name" %>
+    <%= f.submit "Add Item"  %>
+  </div>
+  <div>
+    <%= f.text_field :price, placeholder: "price" %>
+  </div>
+<% end %>
+
+<% @items.each do |item| %>
+<td>
+<tr><%= item.name %> $<%= item.price %> </tr>
+</td>
+<% end %>

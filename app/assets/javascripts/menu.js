@@ -8,7 +8,7 @@ var Menu = {
     $('#error_message').empty()
     $('#menu_list').append(data.menu_item)
     var form = document.getElementById('new_menu')
-    form.reset()
+        form.reset()
   },
 
   throwError: function(event, xhr, status, error) {
@@ -20,4 +20,5 @@ var Menu = {
 
 $(document).ready(function(){
   Menu.init();
+
 })

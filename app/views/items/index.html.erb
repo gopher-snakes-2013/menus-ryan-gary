@@ -8,6 +8,7 @@
   </div>
 <% end %>
 
+<p id="error_message"></p>
 <ul id="item_list">
 	<% @items.each do |item| %>
 		<%= render partial: "item", locals: {:item => item} %>

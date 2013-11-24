@@ -10,6 +10,6 @@
 
 <ul id="item_list">
 	<% @items.each do |item| %>
-		<%= render partial: "item" %>
+		<%= render partial: "item", locals: {:item => item} %>
 	<% end %>
 </ul>

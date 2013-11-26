@@ -1,4 +1,7 @@
-<%= form_for @item, remote: true, url: menu_items_path() do |f| %>
+<h3><%= thing.title %></h3>
+
+<%= form_for item, remote: true, url: menu_items_path() do |f| %>
+  
   <div>
     <%= f.text_field :name, placeholder: "item name" %>
     <%= f.submit "Add Item"  %>
@@ -8,9 +11,10 @@
   </div>
 <% end %>
 
+
 <p id="error_message"></p>
 <ul id="item_list">
-	<% @items.each do |item| %>
-		<%= render partial: "item", locals: {:item => item} %>
-	<% end %>
+  <% items.each do |item| %>
+    <%= render partial: "item", locals: {:item => item} %>
+  <% end %>
 </ul>

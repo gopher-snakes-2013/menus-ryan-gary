@@ -1,1 +1,23 @@
-<li><%= item.name %> $<%= item.price %> </li>
+<h3><%= thing.title %></h3>
+
+<%= form_for item, remote: true, url: menu_items_path() do |f| %>
+  
+  <div>
+    <%= f.text_field :name, placeholder: "item name" %>
+    <%= f.submit "Add Item"  %>
+  </div>
+  <div>
+    <%= f.text_field :price, placeholder: "price" %>
+  </div>
+<% end %>
+
+
+<p id="error_message"></p>
+<ul id="item_list">
+  <% items.each do |item| %>
+    <li><%= item.name %> $<%= item.price %> </li>
+  <% end %>
+</ul>
+
+
+

@@ -1,2 +1,11 @@
-<li><%= mary.title %> <%= link_to "Details"%>
+<li>
+  <%= m.title %> 
+  <%= link_to "Details", menu_items_path(m.id), :class => "details", :remote => true %>
+  <div class="menu_drop" id="<%=m.id%>">
+
+
+  </div>
 </li>
+
+
+

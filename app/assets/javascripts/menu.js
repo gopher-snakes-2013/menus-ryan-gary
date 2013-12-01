@@ -25,6 +25,7 @@ var Menu = {
     $('#'+itemList).append(data.item_form)
     // console.log("helloooooooooooooo")
     $('#'+itemList).toggle('fast')
+    console.log("I'm here")
   }
 
 
